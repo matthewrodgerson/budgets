@@ -62,7 +62,7 @@ class Application extends Controller {
     implicit val formats = Serialization.formats(NoTypeHints)
     val starter = "{"+q("name")+":"+q("Projects")+","+q("children")+":"
     val endJSON = (starter+write(projectList)+"}")
-    Ok(views.html.main("Project Detail")(views.html.budgetViewer(endJSON)))
+    Ok(views.html.main("Project Details")(views.html.budgetViewer(endJSON)))
   }
     
 }
